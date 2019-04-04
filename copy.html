@@ -1,0 +1,9 @@
+<h1>Copied!</h1>
+<script>
+  var urlParams = new URLSearchParams(location.search);
+  var message = decodeURIComponent(urlParams.get('text'))
+  console.log(message)
+  navigator.clipboard.writeText(message).then(() => {
+    console.log('woo!')
+  })
+</script>
